@@ -41,13 +41,13 @@ The Quadtree structure represents black and white images. A Quadtree image is:
 
 We will represent these images with the following structure:
 
-typedef struct bloc_image
-{
-    bool toutnoir;
-    struct bloc_image *fils[4];
-} bloc_image;
+        typedef struct bloc_image
+        {
+            bool toutnoir;
+            struct bloc_image *fils[4];
+        } bloc_image;
 
-typedef bloc_image *image;
+        typedef bloc_image *image;
 
 When the pointer is NULL, the image is white.
 When it points to a struct whose toutnoir field is true, the image is black and the 4 fils[0], fils[1], fils[2], fils[3] fields are NULL.
